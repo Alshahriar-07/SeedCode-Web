@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seed Code CLI — The beautiful AI coding assistant for your terminal</title>
+  <meta name="description" content="Seed Code CLI is a fast, elegant AI coding assistant for your terminal. Connect to OpenRouter, AeroLink, FreeModel, and Ollama with streaming responses, Markdown rendering, and cross-platform support.">
+  <meta name="keywords" content="Seed Code CLI, AI coding assistant, terminal AI, CLI, OpenRouter, AeroLink, FreeModel, Ollama, developer tools, command line, streaming AI">
+  <meta name="author" content="Al Shahriar Sowan">
+  <meta name="publisher" content="Eagox Studio">
+  <link rel="author" href="https://alshahriarsayon.vercel.app/">
+  <meta name="theme-color" content="#050505">
+  <link rel="canonical" href="https://seedcode-cli.vercel.app/">
+
+  <!-- Icons & manifest -->
+  <link rel="icon" href="public/logo.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="public/logo.svg">
+  <link rel="apple-touch-icon" href="public/logo.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Seed Code CLI">
+  <meta property="og:title" content="Seed Code CLI — The beautiful AI coding assistant for your terminal">
+  <meta property="og:description" content="Fast, elegant, and built for developers. Connect to your favorite AI providers and enjoy a polished terminal experience with streaming responses, modern UI, and cross-platform support.">
+  <meta property="og:url" content="https://seedcode-cli.vercel.app/">
+  <meta property="og:image" content="https://seedcode-cli.vercel.app/public/logo.png">
+  <meta property="og:image:alt" content="Seed Code CLI logo">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Seed Code CLI — The beautiful AI coding assistant for your terminal">
+  <meta name="twitter:description" content="Fast, elegant, and built for developers. Streaming responses, modern UI, and cross-platform support.">
+  <meta name="twitter:image" content="https://seedcode-cli.vercel.app/public/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script type="module" src="js/main.js"></script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Seed Code CLI",
+    "operatingSystem": "Windows, Linux, macOS",
+    "applicationCategory": "DeveloperApplication",
+    "description": "The beautiful AI coding assistant for your terminal. Fast, elegant, and built for developers.",
+    "url": "https://seedcode-cli.vercel.app/",
+    "image": "https://seedcode-cli.vercel.app/public/logo.png",
+    "softwareVersion": "1.0.0",
+    "license": "https://github.com/Alshahriar-07/seedcode-cli/blob/main/LICENSE",
+    "author": {
+      "@type": "Person",
+      "name": "Al Shahriar Sowan",
+      "url": "https://alshahriarsayon.vercel.app/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Eagox Studio"
+    },
+    "codeRepository": "https://github.com/Alshahriar-07/seedcode-cli",
+    "sameAs": [
+      "https://github.com/Alshahriar-07/seedcode-cli",
+      "https://alshahriarsayon.vercel.app/"
+    ],
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "downloadUrl": "https://seedcode-cli.vercel.app/Files/SeedCodeSetup.exe"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html" aria-label="Seed Code CLI home">
+        <img src="public/logo.svg" alt="" width="28" height="28">
+        <span>Seed Code</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="download.html">Installation</a></li>
+          <li><a href="docs.html">Commands</a></li>
+          <li><a href="roadmap.html">Roadmap</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="https://alshahriarsayon.vercel.app/" target="_blank" rel="noopener">About Developer</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="https://github.com/Alshahriar-07/seedcode-cli" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.94c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.11-.74.4-1.25.73-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.04 11.04 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.05.78 2.13v3.16c0 .3.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+          <span class="nav-github-label">GitHub</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+          <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ Hero ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-radial"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+        <canvas class="hero-particles"></canvas>
+        <div class="hero-noise"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-inner">
+          <pre class="hero-ascii" aria-hidden="true">
+ ███████╗███████╗███████╗██████╗      ██████╗ ██████╗ ██████╗ ███████╗
+ ██╔════╝██╔════╝██╔════╝██╔══██╗    ██╔════╝██╔═══██╗██╔══██╗██╔════╝
+ ███████╗█████╗  █████╗  ██║  ██║    ██║     ██║   ██║██║  ██║█████╗
+ ╚════██║██╔══╝  ██╔══╝  ██║  ██║    ██║     ██║   ██║██║  ██║██╔══╝
+ ███████║███████╗███████╗██████╔╝    ╚██████╗╚██████╔╝██████╔╝███████╗
+ ╚══════╝╚══════╝╚══════╝╚═════╝      ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
+</pre>
+          <h1 id="hero-title">Seed Code CLI</h1>
+          <p class="hero-subtitle">The beautiful AI coding assistant for your terminal.</p>
+          <p class="hero-description">Fast, elegant, and built for developers. Connect to your favorite AI providers and enjoy a polished terminal experience with streaming responses, modern UI, and cross-platform support.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="Files/SeedCodeSetup.exe" download="SeedCodeSetup.exe">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+              Download for Windows
+            </a>
+            <a class="btn btn-secondary" href="download.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></svg>
+              Install with pip
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/Alshahriar-07/seedcode-cli" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+
+        <!-- ============ Interactive terminal ============ -->
+        <div class="hero-terminal">
+          <div class="terminal" role="img" aria-label="Animated demo of a Seed Code CLI session: launching seedcode, selecting the OpenRouter provider and GLM 5.2 model, then asking it to build a REST API using FastAPI. It plans, writes files, generates code, and finishes.">
+            <div class="terminal-bar">
+              <div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span class="terminal-title">seedcode — zsh</span>
+            </div>
+            <div class="terminal-body" data-terminal aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Features ============ -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Features</span>
+          <h2 id="features-title">Everything a terminal-native developer needs</h2>
+          <p>Considered design meets serious engineering — from first launch to your thousandth session.</p>
+        </div>
+
+        <div class="grid-features">
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3"/><path d="M13 15h4"/></svg></span>
+            <h3>Modern CLI</h3>
+            <p>A thoughtfully designed command-line interface with crisp layouts, subtle color, and zero clutter.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>
+            <h3>Streaming Responses</h3>
+            <p>Tokens render the instant they arrive. Watch answers form in real time with no waiting spinner.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4M6.5 17l4-5.5M17.5 17l-4-5.5"/></svg></span>
+            <h3>OpenRouter Support</h3>
+            <p>Access hundreds of models through OpenRouter with a single API key, including free-tier models.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V8a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12"/><path d="M6 10h.01M10 10h.01"/><path d="m17 15 2 2 4-4"/></svg></span>
+            <h3>FreeModel Support</h3>
+            <p>Start instantly with FreeModel — free access to capable models with zero billing setup.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
+            <h3>AeroLink Support</h3>
+            <p>Connect through AeroLink for low-latency inference and regional endpoint selection.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="12" cy="11" r="3.5"/><path d="M9 20v-1.5M15 20v-1.5"/></svg></span>
+            <h3>Ollama Support</h3>
+            <p>Run models fully local with Ollama — private, offline-friendly, and no API key required.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></span>
+            <h3>Markdown Rendering</h3>
+            <p>Rich Markdown rendered directly in your terminal — headings, lists, tables, and links included.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6"/><path d="m16 6 6 6-6 6"/></svg></span>
+            <h3>Syntax Highlighting</h3>
+            <p>Code blocks are highlighted for dozens of languages, so answers read like your editor.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
+            <h3>Cross Platform</h3>
+            <p>One tool, everywhere you work. Native support for Windows, Linux, and macOS.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span>
+            <h3>Fast Startup</h3>
+            <p>Cold start in milliseconds. Seed Code is ready before your terminal finishes drawing the prompt.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <h3>Configuration System</h3>
+            <p>A simple, versionable config file for providers, models, themes, and keybindings.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></span>
+            <h3>Open Source</h3>
+            <p>MIT licensed and developed in the open. Read the source, file issues, and ship improvements.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg></span>
+            <h3>Beautiful Terminal Experience</h3>
+            <p>Every pixel of output is considered — from progress states to panels to the blinking cursor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Installation ============ -->
+    <section class="section" id="install" aria-labelledby="install-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Installation</span>
+          <h2 id="install-title">Up and running in seconds</h2>
+          <p>Three ways to install. One command to verify. Zero configuration required to start.</p>
+        </div>
+
+        <div class="install-grid">
+          <article class="card install-card reveal">
+            <div class="install-card-head">
+              <h3>pip</h3>
+              <span class="install-step">Method 1</span>
+            </div>
+            <p>Install from PyPI with Python 3.9 or newer.</p>
+            <div class="code-line">
+              <span class="prompt-char" aria-hidden="true">$</span>
+              <code>pip install seedcode-cli</code>
+              <button class="copy-btn" type="button" aria-label="Copy pip install command">
+                <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="visually-hidden" data-copy-status role="status"></span>
+              </button>
+            </div>
+          </article>
+
+          <article class="card install-card reveal">
+            <div class="install-card-head">
+              <h3>uv</h3>
+              <span class="install-step">Method 2</span>
+            </div>
+            <p>Install as an isolated tool with uv — fast and clean.</p>
+            <div class="code-line">
+              <span class="prompt-char" aria-hidden="true">$</span>
+              <code>uv tool install seedcode-cli</code>
+              <button class="copy-btn" type="button" aria-label="Copy uv install command">
+                <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="visually-hidden" data-copy-status role="status"></span>
+              </button>
+            </div>
+          </article>
+
+          <article class="card install-card reveal">
+            <div class="install-card-head">
+              <h3>Windows Installer</h3>
+              <span class="install-step">Method 3</span>
+            </div>
+            <p>A standalone installer — no Python required.</p>
+            <a class="btn btn-primary" href="Files/SeedCodeSetup.exe" download="SeedCodeSetup.exe">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+              SeedCodeSetup.exe
+            </a>
+          </article>
+        </div>
+
+        <div class="callout callout-center reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Verify your install with <code>seedcode --version</code> — you should see <code>v1.0.0</code>.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Screenshots ============ -->
+    <section class="section" id="screens" aria-labelledby="screens-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">In Action</span>
+          <h2 id="screens-title">Designed down to the last character</h2>
+          <p>A look at Seed Code in real sessions — chat, streaming, configuration, and more.</p>
+        </div>
+
+        <div class="grid-screens">
+          <article class="card screen-card reveal-scale">
+            <div class="terminal-mini">
+              <div class="terminal-bar"><div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div></div>
+              <div class="terminal-mini-body" role="img" aria-label="Chat session: asking Seed Code to explain async generators in Python, with a streaming Markdown answer">
+                <div class="terminal-line"><span class="t-prompt">$ </span><span class="t-cmd">seedcode chat</span></div>
+                <div class="terminal-line"><span class="t-value">You › Explain async generators in Python</span></div>
+                <div class="terminal-line"><span class="t-dim">AI  › An async generator combines async def</span></div>
+                <div class="terminal-line"><span class="t-dim">      with yield, producing values you can</span></div>
+                <div class="terminal-line"><span class="t-dim">      iterate with async for ...</span></div>
+              </div>
+            </div>
+            <h3>Chat</h3>
+            <p>Converse naturally with streaming, Markdown-rendered answers.</p>
+          </article>
+
+          <article class="card screen-card reveal-scale">
+            <div class="terminal-mini">
+              <div class="terminal-bar"><div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div></div>
+              <div class="terminal-mini-body" role="img" aria-label="Streaming demo: Seed Code writing a haiku about git word by word">
+                <div class="terminal-line"><span class="t-prompt">$ </span><span class="t-cmd">seedcode "write a haiku about git"</span></div>
+                <div class="terminal-line"><span class="t-dim">branches drift apart</span></div>
+                <div class="terminal-line"><span class="t-dim">a merge brings them home again</span></div>
+                <div class="terminal-line"><span class="t-dim">conflicts, then release ▌</span></div>
+              </div>
+            </div>
+            <h3>Streaming</h3>
+            <p>Watch tokens arrive live, with graceful word wrapping.</p>
+          </article>
+
+          <article class="card screen-card reveal-scale">
+            <div class="terminal-mini">
+              <div class="terminal-bar"><div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div></div>
+              <div class="terminal-mini-body" role="img" aria-label="Configuration wizard: provider OpenRouter, model GLM 5.2, theme Midnight, saved to config file">
+                <div class="terminal-line"><span class="t-prompt">$ </span><span class="t-cmd">seedcode config</span></div>
+                <div class="terminal-line"><span class="t-label">Provider   › </span><span class="t-value">OpenRouter</span></div>
+                <div class="terminal-line"><span class="t-label">Model      › </span><span class="t-value">GLM 5.2</span></div>
+                <div class="terminal-line"><span class="t-label">Theme      › </span><span class="t-value">Midnight</span></div>
+                <div class="terminal-line"><span class="t-ok">✓ Saved to ~/.seedcode/config.toml</span></div>
+              </div>
+            </div>
+            <h3>Configuration</h3>
+            <p>A guided wizard for providers, API keys, and defaults.</p>
+          </article>
+
+          <article class="card screen-card reveal-scale">
+            <div class="terminal-mini">
+              <div class="terminal-bar"><div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div></div>
+              <div class="terminal-mini-body" role="img" aria-label="Terminal health check with seedcode doctor: Python detected, API key configured, network reachable, all checks passed">
+                <div class="terminal-line"><span class="t-prompt">$ </span><span class="t-cmd">seedcode doctor</span></div>
+                <div class="terminal-line"><span class="t-ok">✓ </span><span class="t-value">Python 3.12 detected</span></div>
+                <div class="terminal-line"><span class="t-ok">✓ </span><span class="t-value">API key configured</span></div>
+                <div class="terminal-line"><span class="t-ok">✓ </span><span class="t-value">Network reachable (82 ms)</span></div>
+                <div class="terminal-line"><span class="t-dim">6/6 checks passed</span></div>
+              </div>
+            </div>
+            <h3>Terminal</h3>
+            <p>Panels, tables, and progress states that feel native.</p>
+          </article>
+
+          <article class="card screen-card reveal-scale">
+            <div class="terminal-mini">
+              <div class="terminal-bar"><div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div></div>
+              <div class="terminal-mini-body" role="img" aria-label="Theme picker: Midnight active, plus Paper, Ember, and Terminal Classic themes">
+                <div class="terminal-line"><span class="t-prompt">$ </span><span class="t-cmd">seedcode config theme</span></div>
+                <div class="terminal-line"><span class="t-value">● Midnight   (active)</span></div>
+                <div class="terminal-line"><span class="t-dim">○ Paper</span></div>
+                <div class="terminal-line"><span class="t-dim">○ Ember</span></div>
+                <div class="terminal-line"><span class="t-dim">○ Terminal Classic</span></div>
+              </div>
+            </div>
+            <h3>Themes</h3>
+            <p>Ship-ready themes tuned for contrast and long sessions.</p>
+          </article>
+
+          <article class="card screen-card reveal-scale">
+            <div class="terminal-mini">
+              <div class="terminal-bar"><div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div></div>
+              <div class="terminal-mini-body" role="img" aria-label="Settings file: a TOML config with provider openrouter, model glm-5.2, and streaming enabled">
+                <div class="terminal-line"><span class="t-prompt">$ </span><span class="t-cmd">cat ~/.seedcode/config.toml</span></div>
+                <div class="terminal-line"><span class="t-dim">[provider]</span></div>
+                <div class="terminal-line"><span class="t-value">name = "openrouter"</span></div>
+                <div class="terminal-line"><span class="t-value">model = "glm-5.2"</span></div>
+                <div class="terminal-line"><span class="t-dim">stream = true</span></div>
+              </div>
+            </div>
+            <h3>Settings</h3>
+            <p>Everything lives in one clean, versionable TOML file.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Comparison ============ -->
+    <section class="section" id="compare" aria-labelledby="compare-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Comparison</span>
+          <h2 id="compare-title">Why developers choose Seed Code</h2>
+          <p>The same terminal. A completely different experience.</p>
+        </div>
+
+        <div class="compare-wrap reveal">
+          <table class="compare-table">
+            <caption class="visually-hidden">Feature comparison between Seed Code CLI and a generic AI CLI</caption>
+            <thead>
+              <tr>
+                <th scope="col">Capability</th>
+                <th scope="col" class="compare-col-seed">Seed Code CLI</th>
+                <th scope="col">Generic AI CLI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Beautiful UI</th>
+                <td class="compare-col-seed"><span class="compare-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Yes</span></td>
+                <td><span class="compare-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>No</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Streaming</th>
+                <td class="compare-col-seed"><span class="compare-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Yes</span></td>
+                <td><span class="compare-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Yes</span></td>
+              </tr>
+              <tr>
+                <th scope="row">OpenRouter</th>
+                <td class="compare-col-seed"><span class="compare-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Yes</span></td>
+                <td><span class="compare-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>No</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Free Models</th>
+                <td class="compare-col-seed"><span class="compare-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Yes</span></td>
+                <td><span class="compare-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>No</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Easy Installation</th>
+                <td class="compare-col-seed"><span class="compare-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Yes</span></td>
+                <td><span class="compare-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>No</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Cross Platform</th>
+                <td class="compare-col-seed"><span class="compare-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Yes</span></td>
+                <td><span class="compare-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Yes</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Open Source</th>
+                <td class="compare-col-seed"><span class="compare-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Yes</span></td>
+                <td><span class="compare-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>No</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Modern UX</th>
+                <td class="compare-col-seed"><span class="compare-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Yes</span></td>
+                <td><span class="compare-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>No</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="cta-title">Your terminal deserves better</h2>
+          <p>Install Seed Code CLI and start shipping with AI — beautifully.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="download.html">Get Seed Code CLI</a>
+            <a class="btn btn-secondary" href="docs.html">Read the docs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-row">
+            <img src="public/logo.svg" alt="" width="32" height="32">
+            <span>Seed Code CLI</span>
+          </div>
+          <p>The beautiful AI coding assistant for your terminal. Fast, elegant, and built for developers.</p>
+          <p class="footer-credit">Published by <strong>Eagox Studio</strong><br>Built by <a href="https://alshahriarsayon.vercel.app/" target="_blank" rel="noopener">Al Shahriar Sowan</a></p>
+          <span class="footer-version">Latest Version v1.0.0 · MIT License</span>
+        </div>
+        <nav aria-label="Product">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Resources">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="docs.html">Documentation</a></li>
+            <li><a href="docs.html#commands">Commands</a></li>
+            <li><a href="docs.html#configuration">Configuration</a></li>
+            <li><a href="https://pypi.org/project/seedcode-cli/" rel="noopener">PyPI</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Community">
+          <h3>Community</h3>
+          <ul>
+            <li><a href="https://github.com/Alshahriar-07/seedcode-cli" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://alshahriarsayon.vercel.app/" target="_blank" rel="noopener">Portfolio</a></li>
+            <li><a href="https://github.com/Alshahriar-07/seedcode-cli/releases" target="_blank" rel="noopener">Releases</a></li>
+            <li><a href="https://github.com/Alshahriar-07/seedcode-cli/blob/main/LICENSE" target="_blank" rel="noopener">License</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Eagox Studio · Seed Code CLI. All rights reserved.</span>
+        <span>Crafted for the terminal.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

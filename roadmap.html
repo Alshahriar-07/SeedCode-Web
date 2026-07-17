@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roadmap — Seed Code CLI</title>
+  <meta name="description" content="The Seed Code CLI roadmap: what has shipped — CLI, streaming, themes, configuration — and what is coming next, including plugins, MCP, voice, memory, a desktop app, and agent mode.">
+  <meta name="keywords" content="Seed Code CLI roadmap, upcoming features, plugins, MCP, agent mode, desktop app, AI CLI future">
+  <meta name="author" content="Seed Code CLI">
+  <meta name="theme-color" content="#050505">
+  <link rel="canonical" href="https://seedcode-cli.vercel.app/roadmap.html">
+
+  <link rel="icon" href="public/logo.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="public/logo.svg">
+  <link rel="apple-touch-icon" href="public/logo.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Seed Code CLI">
+  <meta property="og:title" content="Seed Code CLI Roadmap">
+  <meta property="og:description" content="What has shipped and what is coming next — plugins, MCP, voice, memory, a desktop app, and agent mode.">
+  <meta property="og:url" content="https://seedcode-cli.vercel.app/roadmap.html">
+  <meta property="og:image" content="https://seedcode-cli.vercel.app/public/logo.png">
+  <meta property="og:image:alt" content="Seed Code CLI logo">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Seed Code CLI Roadmap">
+  <meta name="twitter:description" content="What has shipped and what is coming next.">
+  <meta name="twitter:image" content="https://seedcode-cli.vercel.app/public/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html" aria-label="Seed Code CLI home">
+        <img src="public/logo.svg" alt="" width="28" height="28">
+        <span>Seed Code</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="download.html">Installation</a></li>
+          <li><a href="docs.html">Commands</a></li>
+          <li><a href="roadmap.html">Roadmap</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="https://github.com/seedcode-cli/seedcode" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.94c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.11-.74.4-1.25.73-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.04 11.04 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.05.78 2.13v3.16c0 .3.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+          <span class="nav-github-label">GitHub</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+          <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <section class="page-hero" aria-labelledby="page-title">
+        <span class="eyebrow">Roadmap</span>
+        <h1 id="page-title">Where Seed Code is heading</h1>
+        <p>Shipped, stable, and what's next. Built in the open — follow along or contribute on GitHub.</p>
+      </section>
+
+      <section class="section" aria-label="Roadmap timeline">
+        <div class="timeline">
+          <h2 class="timeline-heading reveal">Shipped</h2>
+
+          <div class="timeline-item is-current reveal">
+            <h3>CLI <span class="badge badge-live">Live</span></h3>
+            <p>The full interactive command-line experience, shipped and stable.</p>
+          </div>
+          <div class="timeline-item is-current reveal">
+            <h3>Streaming <span class="badge badge-live">Live</span></h3>
+            <p>Real-time token streaming across every supported provider.</p>
+          </div>
+          <div class="timeline-item is-current reveal">
+            <h3>Themes <span class="badge badge-live">Live</span></h3>
+            <p>Multiple built-in themes with careful contrast tuning.</p>
+          </div>
+          <div class="timeline-item is-current reveal">
+            <h3>Configuration <span class="badge badge-live">Live</span></h3>
+            <p>A complete configuration system with a guided setup wizard.</p>
+          </div>
+
+          <h2 class="timeline-heading reveal">Upcoming</h2>
+
+          <div class="timeline-item reveal">
+            <h3>Plugins <span class="badge">Planned</span></h3>
+            <p>Extend Seed Code with community-built commands and renderers.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <h3>MCP <span class="badge">Planned</span></h3>
+            <p>Model Context Protocol support for tools and external context.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <h3>Voice <span class="badge">Planned</span></h3>
+            <p>Talk to your terminal — dictate prompts and hear responses.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <h3>Memory <span class="badge">Planned</span></h3>
+            <p>Persistent, local-first memory across sessions and projects.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <h3>Desktop App <span class="badge">Planned</span></h3>
+            <p>The Seed Code experience in a native desktop shell.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <h3>Agent Mode <span class="badge">Planned</span></h3>
+            <p>Multi-step autonomous coding with plan, execute, and review.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="cta-title">
+        <div class="section-head reveal">
+          <h2 id="cta-title">Help shape the roadmap</h2>
+          <p>Feature requests, bug reports, and pull requests are all welcome.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://github.com/seedcode-cli/seedcode" rel="noopener">Contribute on GitHub</a>
+            <a class="btn btn-secondary" href="download.html">Get Seed Code CLI</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-row">
+            <img src="public/logo.svg" alt="" width="32" height="32">
+            <span>Seed Code CLI</span>
+          </div>
+          <p>The beautiful AI coding assistant for your terminal. Fast, elegant, and built for developers.</p>
+          <span class="footer-version">v1.0.0 · MIT License</span>
+        </div>
+        <nav aria-label="Product">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Resources">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="docs.html">Documentation</a></li>
+            <li><a href="docs.html#commands">Commands</a></li>
+            <li><a href="docs.html#configuration">Configuration</a></li>
+            <li><a href="https://pypi.org/project/seedcode-cli/" rel="noopener">PyPI</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Community">
+          <h3>Community</h3>
+          <ul>
+            <li><a href="https://github.com/seedcode-cli/seedcode" rel="noopener">GitHub</a></li>
+            <li><a href="https://github.com/seedcode-cli/seedcode/releases" rel="noopener">Releases</a></li>
+            <li><a href="https://github.com/seedcode-cli/seedcode/blob/main/LICENSE" rel="noopener">License</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Seed Code CLI. All rights reserved.</span>
+        <span>Crafted for the terminal.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

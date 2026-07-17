@@ -1,0 +1,162 @@
+/* ============================================================
+   Seed Code CLI — Terminal component
+   ============================================================ */
+
+.terminal {
+  max-width: 44rem;
+  margin-inline: auto;
+  background: #0a0a0a;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-raised), var(--glow-soft);
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: clamp(0.75rem, 0.7rem + 0.3vw, 0.875rem);
+  line-height: 1.7;
+}
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: #101010;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 7px;
+}
+
+.terminal-dots span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+}
+
+.terminal-title {
+  flex: 1;
+  text-align: center;
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  letter-spacing: 0.04em;
+  /* Balance the dots so the title is optically centered */
+  margin-right: calc(11px * 3 + 14px);
+}
+
+.terminal-body {
+  padding: var(--space-4) var(--space-5);
+  min-height: 21rem;
+  max-height: 24rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-strong) transparent;
+}
+
+.terminal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 3px;
+}
+
+.terminal-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+  min-height: 1.7em;
+}
+
+.terminal-line .t-prompt {
+  color: var(--color-text-secondary);
+}
+
+.terminal-line .t-cmd {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.terminal-line .t-dim {
+  color: var(--color-text-secondary);
+}
+
+.terminal-line .t-label {
+  color: var(--color-text-tertiary);
+}
+
+.terminal-line .t-value {
+  color: var(--color-text);
+}
+
+.terminal-line .t-ok {
+  color: var(--color-success);
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.15em;
+  background: var(--color-text);
+  vertical-align: text-bottom;
+  animation: cursor-blink 1.1s steps(1) infinite;
+}
+
+/* Static mini terminals (commands, screenshots) */
+.terminal-mini {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.terminal-mini .terminal-bar {
+  padding: var(--space-2) var(--space-3);
+}
+
+.terminal-mini .terminal-dots span {
+  width: 9px;
+  height: 9px;
+}
+
+.terminal-mini-body {
+  padding: var(--space-3) var(--space-4);
+  overflow-x: auto;
+}
+
+.terminal-mini-body .terminal-line {
+  white-space: pre;
+}
+
+.command-card {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+}
+
+.command-card .command-name {
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.command-card p {
+  min-height: 2.6em;
+}
+
+.screen-card {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+}
+
+.screen-card .terminal-mini {
+  min-height: 12rem;
+}

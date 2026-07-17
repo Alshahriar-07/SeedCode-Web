@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Not Found — Seed Code CLI</title>
+  <meta name="description" content="This page could not be found. Head back to the Seed Code CLI homepage.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#050505">
+
+  <link rel="icon" href="public/logo.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="public/logo.svg">
+  <link rel="apple-touch-icon" href="public/logo.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html" aria-label="Seed Code CLI home">
+        <img src="public/logo.svg" alt="" width="28" height="28">
+        <span>Seed Code</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="download.html">Installation</a></li>
+          <li><a href="docs.html">Commands</a></li>
+          <li><a href="roadmap.html">Roadmap</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="https://github.com/seedcode-cli/seedcode" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.94c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.11-.74.4-1.25.73-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.04 11.04 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.05.78 2.13v3.16c0 .3.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+          <span class="nav-github-label">GitHub</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+          <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="error-page" aria-labelledby="error-title">
+      <p class="error-code" aria-hidden="true">404</p>
+      <h1 id="error-title">Command not found</h1>
+      <p class="text-secondary">The page you're looking for doesn't exist — it may have been moved or renamed.</p>
+      <div class="terminal-mini callout-center">
+        <div class="terminal-bar"><div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div></div>
+        <div class="terminal-mini-body">
+          <div class="terminal-line"><span class="t-prompt">$ </span><span class="t-cmd">seedcode open this-page</span></div>
+          <div class="terminal-line"><span class="t-dim">error: route not found (404)</span></div>
+          <div class="terminal-line"><span class="t-ok">hint: </span><span class="t-value">try `seedcode open home`</span></div>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="index.html">Back to home</a>
+        <a class="btn btn-secondary" href="docs.html">Browse the docs</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Seed Code CLI. All rights reserved.</span>
+        <span class="footer-version">v1.0.0 · MIT License</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

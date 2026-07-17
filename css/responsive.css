@@ -1,0 +1,132 @@
+/* ============================================================
+   Seed Code CLI — Responsive rules
+   ============================================================ */
+
+/* Tablet and below */
+@media (max-width: 56rem) {
+  .nav-links {
+    position: fixed;
+    inset: var(--nav-height) 0 auto 0;
+    z-index: 40;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-1);
+    padding: var(--space-4) var(--container-pad) var(--space-5);
+    background: rgb(5 5 5 / 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--color-border);
+    transform: translateY(-8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform var(--dur-med) var(--ease-out),
+      opacity var(--dur-med) var(--ease-out),
+      visibility 0s var(--dur-med);
+  }
+
+  .nav-links.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition: transform var(--dur-med) var(--ease-out),
+      opacity var(--dur-med) var(--ease-out),
+      visibility 0s;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-base);
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav-github-label {
+    display: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .docs-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .docs-sidebar {
+    position: static;
+  }
+
+  .docs-sidebar ul {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    border-left: none;
+  }
+
+  .docs-sidebar a {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    margin-left: 0;
+    padding: var(--space-1) var(--space-4);
+  }
+}
+
+/* Phones */
+@media (max-width: 36rem) {
+  .hero {
+    padding-block: var(--space-7) var(--space-6);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .terminal-body {
+    min-height: 17rem;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .timeline {
+    padding-left: var(--space-5);
+  }
+
+  .timeline-item::before {
+    left: calc(-1 * var(--space-5) + 3px);
+  }
+
+  .timeline-heading {
+    margin-left: calc(-1 * var(--space-5));
+  }
+}
+
+/* Ultra-wide: keep line lengths comfortable, scale hero up slightly */
+@media (min-width: 120rem) {
+  :root {
+    --container-max: 80rem;
+  }
+}

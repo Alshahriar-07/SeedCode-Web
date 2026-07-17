@@ -1,0 +1,69 @@
+/* ============================================================
+   Seed Code CLI — Design Tokens
+   ============================================================ */
+
+:root {
+  color-scheme: dark;
+
+  /* Palette */
+  --color-bg: #050505;
+  --color-bg-raised: #0a0a0a;
+  --color-card: #101010;
+  --color-card-hover: #161616;
+  --color-border: #222222;
+  --color-border-strong: #333333;
+  --color-text: #ffffff;
+  --color-text-secondary: #a0a0a0;
+  --color-text-tertiary: #6a6a6a;
+  --color-accent: #ffffff;
+  --color-success: #4ade80;
+  --color-danger: #f87171;
+
+  /* Typography */
+  --font-heading: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", ui-monospace, "SF Mono", Consolas, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: clamp(1.25rem, 1.1rem + 0.7vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.2rem + 1.4vw, 2.25rem);
+  --text-3xl: clamp(2rem, 1.5rem + 2.4vw, 3.25rem);
+  --text-hero: clamp(2.5rem, 1.8rem + 3.6vw, 4.5rem);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-section: clamp(4rem, 3rem + 5vw, 8rem);
+
+  /* Layout */
+  --container-max: 72rem;
+  --container-pad: clamp(1rem, 0.5rem + 2.5vw, 2rem);
+  --nav-height: 4rem;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px rgb(0 0 0 / 0.35);
+  --shadow-raised: 0 2px 6px rgb(0 0 0 / 0.5), 0 16px 48px rgb(0 0 0 / 0.5);
+  --glow-soft: 0 0 60px rgb(255 255 255 / 0.06);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 150ms;
+  --dur-med: 300ms;
+  --dur-slow: 600ms;
+}

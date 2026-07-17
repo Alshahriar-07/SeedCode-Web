@@ -1,0 +1,113 @@
+/* ============================================================
+   Seed Code CLI — Animations & motion
+   ============================================================ */
+
+@keyframes grid-drift {
+  from {
+    background-position: 0 0, 0 0;
+  }
+  to {
+    background-position: 0 56px, 56px 0;
+  }
+}
+
+@keyframes cursor-blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(3.2);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll-reveal: elements start hidden, .is-visible added by IO */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.96) translateY(14px);
+  transition: opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Hero entrance (plays on load, no IO needed) */
+.hero-inner > * {
+  animation: fade-up 0.8s var(--ease-out) both;
+}
+
+.hero-inner > :nth-child(1) { animation-delay: 0ms; }
+.hero-inner > :nth-child(2) { animation-delay: 90ms; }
+.hero-inner > :nth-child(3) { animation-delay: 180ms; }
+.hero-inner > :nth-child(4) { animation-delay: 270ms; }
+.hero-inner > :nth-child(5) { animation-delay: 360ms; }
+
+.hero-terminal {
+  animation: fade-up 0.9s var(--ease-out) 450ms both;
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .reveal,
+  .reveal-scale {
+    opacity: 1;
+    transform: none;
+  }
+
+  .terminal-cursor {
+    animation: none;
+    opacity: 1;
+  }
+
+  .hero-grid {
+    animation: none;
+  }
+}
